@@ -3,6 +3,8 @@ package academy.learnprogramming;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.annotation.PostConstruct;
+
 
 public class GameImpl implements Game{
     // == constants ==
@@ -20,7 +22,7 @@ public class GameImpl implements Game{
 
     // == Init ==
 
-    
+    @PostConstruct
     @Override
     public void reset() {
         smallest = 0;
