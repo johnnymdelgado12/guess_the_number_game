@@ -3,17 +3,25 @@ package academy.learnprogramming;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 import org.w3c.dom.ls.LSOutput;
 
 import javax.annotation.PostConstruct;
 
+@Component
 public class MessageGeneratorImpl implements MessageGenerator{
     // == constants ==
     private static final Logger log = LoggerFactory.getLogger(MessageGeneratorImpl.class);
 
     // == Fields ==
+    private final Game game;
+
+    //== Constructor ==
     @Autowired
-    private Game game;
+    public MessageGeneratorImpl(Game game) {
+        this.game = game;
+    }
 
     // == Init ==
     @PostConstruct
