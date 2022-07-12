@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-    <head th:replace="~{fragments/head :: headFragment}">
+    <head th:replace="fragments/head :: head('Game Over')">
     </head>
     <body>
         <div align="center">
@@ -11,8 +11,7 @@
             <h3><a th:href="home">Home</a></h3>
         </div>
     </body>
-    <footer align="center">
-        <p>Created by Johnny Delgado</p>
+    <footer th:replace="fragments/footer :: footerFragment" align="center">
     </footer>
 </html>
 
